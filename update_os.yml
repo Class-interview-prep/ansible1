@@ -1,0 +1,10 @@
+---
+- name: update os
+  hosts: localhost
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: update all the packages on all os
+      package:
+        name: "*"
+        state: latest
